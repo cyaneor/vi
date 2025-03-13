@@ -20,8 +20,8 @@
 #ifndef VI_VERSION_H
 #define VI_VERSION_H
 
-#include "char.h"
 #include "return.h"
+#include "str_raw.h"
 #include "attribute.h"
 
 // ------------------------------------------ Методы ------------------------------------------ //
@@ -35,7 +35,7 @@ VI_COMPILER(EXTERN_C_BEGIN)
  * Версия формируется из предопределенных макросов VI_VERSION_MAJOR, VI_VERSION_MINOR
  * и VI_VERSION_PATCH с использованием макроса vi_stringify_args.
  *
- * @return Константный указатель на строку (const char*),
+ * @return Константный указатель на строку,
  *         содержащую версию библиотеки.
  *
  * @note Возвращаемая строка имеет формат "X.Y.Z", где:
@@ -44,7 +44,7 @@ VI_COMPILER(EXTERN_C_BEGIN)
  *       - Z - патч-версия (VI_VERSION_PATCH)
  */
 VI_ATTRIBUTE(SYMBOL)
-const vi_char_t *
+const vi_str_raw_t
 vi_version();
 
 /**

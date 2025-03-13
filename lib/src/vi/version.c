@@ -2,7 +2,7 @@
 /* Дополнительные модули */
 #include <vi/stringify.h>
 
-const vi_char_t *
+const vi_str_raw_t
 vi_version()
 {
     return vi_stringify_args(VI_VERSION_MAJOR.VI_VERSION_MINOR.VI_VERSION_PATCH);
